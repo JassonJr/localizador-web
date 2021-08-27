@@ -1,0 +1,29 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+/*CONTAINER*/
+.container {
+  border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  border: 2px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.center-screen {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Map</title>
+    <link rel="stylesheet" type="text/css" href="styles/mainstyle.css">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+	<meta charset="utf-8">
+    <script src="./index.js"></script>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+          // The location of Fastwave
+          var location = { lat: -23.608914830711026, lng: -46.66516906749283 };
+          // The map, centered at Fastwave
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 18,
+            center: location,
+          });
+          // The marker, positioned at Fastwave
+          const marker = new google.maps.Marker({
+            position: location,
+            map: map,
+          });
+        }
+      </script>
+  </head>
+  <body>
+        <div class="center-screen">
+            <!--The div element for the map -->
+            <div id="map"></div>
+        </div> 
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRvFx9cCcPlvGhQGFuCUDfWoe3JZa56Ew&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+  </body>
+</html>

@@ -10,7 +10,7 @@
 /*CONTAINER*/
 .container 
 {
-    background-color: white;
+    background-color: blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,12 +22,16 @@
   border-radius: 2px;
   width: 500px;
   height: 406px;
-  background-color: white;
+  background-color: red;
   border: 1px solid #000000;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.local
+{
+    background-color: teal;
 }
   /* Set the size of the div element that contains the map */
 #map {

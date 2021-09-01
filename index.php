@@ -1,41 +1,60 @@
 <?php
     include 'dbconnection.php';
 
+    $sql = "SELECT * FROM  Local ORDER BY id DESC LIMIT 1";
+    $result = $mysqli->query($sql);
+
+    if ($result->num_rows > 0)
+    {
+        //Output data of each row
+        while($row = $result->fetch_assoc())
+        {
+           $ID = $row["ID"];
+           $LOCAL = $row["Local"];
+           $X = $row["Coordenada X"];
+           $Y = $row["Coordenada Y"];
+        }
+    }
+    else
+    {
+        echo "0 results";
+    }
 
 ?>
 <html>
     <head>
-        <title>Localizador WEB Teste</title>
+        <title>GPS</title>
         <link rel="stylesheet" type="text/css" href="styles/mainstyle.css">
+        <link rel="shortcut icon" type="image/png" href="images/white_24dp.png"/>
         <script type="text/javascript" src="jquery.js"></script>
         <meta charset="utf-8">
     </head>
     <body>
         <!--CONTAINER-->
         <div class="container">
+            <h3 class="titulo">LOCALIZADOR WEB</h3>
+            <!--DIV CENTRALIZADA-->
             <div class="center-screen">
+                <!--MAPA-->
                 <div id="mapa"></div>
-                
+                <!--TABELA-->
+                <div class="local">
+                   <table>
+                        <tr class="thead">
+                            <td>ID</td>
+                            <td>LOCAL</td>
+                            <td>COORDENADA X</td>
+                            <td>COORDENADA Y</td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $ID;?></td>
+                            <td><?php echo $LOCAL;?></td>
+                            <td><?php echo $X;?></td>
+                            <td><?php echo $Y;?></td>
+                        </tr>
+                   </table>
+                </div>
             </div>
-            <!--<div class="local">
-                    <?php
-                        $sql = "SELECT * FROM  Local ORDER BY id";
-                        $result = $mysqli->query($sql);
-
-                        if ($result->num_rows > 0)
-                        {
-                            //Output data of each row
-                            while($row = $result->fetch_assoc())
-                            {
-                                echo "ID ". $row["ID"] . "<br>" . "Local " . $row["Local"] . "<br>" . "Coordenada X " . $row["Coordenada X"] . "<br>" . "Coordenada Y " . $row["Coordenada Y"] . "<br>";
-                            }
-                        }
-                        else
-                        {
-                            echo "0 results";
-                        }
-                    ?>
-                </div>-->
         </div>
            <!--SCRIPT-->
 	    <script type="text/javascript">

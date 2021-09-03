@@ -32,9 +32,10 @@
     <body>
         <!--CONTAINER-->
         <div class="container">
-            <h3 class="titulo">LOCALIZADOR WEB</h3>
+            
             <!--DIV CENTRALIZADA-->
             <div class="center-screen">
+            <h3 class="titulo">LOCALIZADOR WEB</h3>
                 <!--MAPA-->
                 <div id="mapa"></div>
                 <!--TABELA-->

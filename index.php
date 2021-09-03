@@ -43,8 +43,8 @@
                         <tr class="thead">
                             <td>ID</td>
                             <td>LOCAL</td>
-                            <td>COORDENADA X</td>
-                            <td>COORDENADA Y</td>
+                            <td>LATITUDE</td>
+                            <td>LONGITUDE</td>
                         </tr>
                         <tr>
                             <td><?php echo $ID;?></td>
